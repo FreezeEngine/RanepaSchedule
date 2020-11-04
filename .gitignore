@@ -1,0 +1,93 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+*.lock
+
+# Dependency directories
+package-lock.json
+/node_modules
+
+# Optional npm cache directory
+.npm
+
+# Prod Bundle
+/build
+
+.vscode
+.idea
+Backups/main_style_dark.css
+Backups/Rasp copy.js
+Backups/Rasp EDITED.js
+Backups/RaspMenu.js
+Backups/search.js
+Backups/settings.js
+Backups/tabdds.js
+Backups/tabs copy.js
+.vs/mini-app/v16/.suo
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+JSON Rasp response/FullRasp.js
+JSON Rasp response/groups.json
+JSON Rasp response/preps.json
+JSON Rasp response/RaspData.json
+TASKS_WORKER/.vs/slnx.sqlite
+TASKS_WORKER/.vs/TASKS_WORKER/v16/.suo
+TASKS_WORKER/.vs/VSWorkspaceState.json
+TASKS_WORKER/AutoVote.php
+TASKS_WORKER/backups/GetGroupsAndTeachers copy.php
+TASKS_WORKER/backups/share_engine copy 2.php
+TASKS_WORKER/backups/share_engine copy 3.php
+TASKS_WORKER/backups/share_engine copy.php
+TASKS_WORKER/Examples/.htaccess
+TASKS_WORKER/Examples/bot-example-php-master/static/cat.jpeg
+TASKS_WORKER/Examples/bot-example-php-master/www/api/vk_api.php
+TASKS_WORKER/Examples/bot-example-php-master/www/api/yandex_api.php
+TASKS_WORKER/Examples/bot-example-php-master/www/bot/bot.php
+TASKS_WORKER/Examples/bot-example-php-master/www/config.php
+TASKS_WORKER/Examples/bot-example-php-master/www/global.php
+TASKS_WORKER/Examples/bot-example-php-master/www/index.php
+TASKS_WORKER/Examples/BOT/config.php.example
+TASKS_WORKER/Examples/BOT/loader.php
+TASKS_WORKER/Examples/BOT/modules/Audio.php
+TASKS_WORKER/Examples/BOT/modules/Auth.php
+TASKS_WORKER/Examples/BOT/modules/BotEngine.php
+TASKS_WORKER/Examples/BOT/modules/DataHandler.php
+TASKS_WORKER/Examples/BOT/modules/Exceptions.php
+TASKS_WORKER/Examples/BOT/modules/Execute.php
+TASKS_WORKER/Examples/BOT/modules/Keyboard.php
+TASKS_WORKER/Examples/BOT/modules/LpDecoder.php
+TASKS_WORKER/Examples/BOT/modules/Message.php
+TASKS_WORKER/Examples/BOT/modules/Requests.php
+TASKS_WORKER/Examples/BOT/modules/Template.php
+TASKS_WORKER/Examples/BOT/modules/Upload.php
+TASKS_WORKER/Examples/BOT/modules/Vk.php
+TASKS_WORKER/Examples/keyboard.json
+TASKS_WORKER/GetGroupsAndTeachers.php
+TASKS_WORKER/GetRasp.php
+TASKS_WORKER/php syntax.php
+TASKS_WORKER/Responses/response wall_poll.json
+TASKS_WORKER/Responses/response_button.json
+TASKS_WORKER/Responses/response_document.json
+TASKS_WORKER/Responses/response_document_gif.json
+TASKS_WORKER/Responses/response_forwarded message.json
+TASKS_WORKER/Responses/response_message.json
+TASKS_WORKER/Responses/response_poll.json
+TASKS_WORKER/Responses/response_poll_fwd.json
+TASKS_WORKER/scr.js
+TASKS_WORKER/ShareEngine.php
+TASKS_WORKER/unused/AddTask.php
+TASKS_WORKER/unused/ChangePerms.php
+TASKS_WORKER/unused/GetData.php
+TASKS_WORKER/unused/GetTasks.php
+TASKS_WORKER/unused/Perms.php
+TASKS_WORKER/unused/send_buttons.php
+TASKS_WORKER/unused/SendMessage.php
+TASKS_WORKER/unused/Setup.php
+TASKS_WORKER/unused/Update_names.php
+TASKS_WORKER/UsersSearch.php
+TASKS_WORKER/VKWorker.php
+TASKS_WORKER/workers/GroupsAndTeachers copy.php
+TASKS_WORKER/workers/SearchTeachers.php
+TASKS_WORKER/workers/SearchUsers.php
+TASKS_WORKER/yandex_6645762d630ac36b.html
