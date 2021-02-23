@@ -9,14 +9,13 @@ import {
   Placeholder,
   Header,
 } from "@vkontakte/vkui";
-import "./main_style.css";
-var rasp = [];
-var url;
+import "./MainStyle.css";
+var Schedule = [];
+var Url;
 
-class Rasp extends React.Component {
+class ScheduleDrawer extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       isLoaded: false,
       error: "",
@@ -32,18 +31,18 @@ class Rasp extends React.Component {
       (this.props.type === "3") |
       (typeof this.props.type === "undefined")
     ) {
-      rasp = "nan";
+      Schedule = "nan";
       this.setState({
         isLoaded: true,
       });
-      return rasp;
+      return Schedule;
     } else {
       try {
-        url = "https://ranepaschedule.000webhostapp.com/GetRasp.php";
-        await fetch(url, {
+        Url = "https://ranepaschedule.000webhostapp.com/GetSchedule.php";
+        await fetch(Url, {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/x-www-form-Urlencoded",
           },
           body:
             "id=" +
@@ -57,18 +56,17 @@ class Rasp extends React.Component {
           .then((result) => {
             switch (result.length !== 0) {
               case true:
-                rasp = result;
+                Schedule = result;
                 this.setState({
                   isLoaded: true,
                 });
-                return rasp;
+                return Schedule;
               default:
-                rasp = [];
+                Schedule = [];
                 this.setState({
                   isLoaded: true,
                 });
-
-                return rasp;
+                return Schedule;
             }
           });
       } catch (error) {
@@ -77,42 +75,42 @@ class Rasp extends React.Component {
     }
   }
   render() {
-    if ((this.state.isLoaded === true) & (rasp.length !== 0)) {
+    if ((this.state.isLoaded === true) & (Schedule.length !== 0)) {
       if ((this.props.type === "0") | (this.props.type === 0)) {
         return (
           <div key={Math.random(1)}>
-            {rasp.map((block) => (
+            {Schedule.map((block) => (
               <div key={Math.random(10)}>
                 <Header mode="secondary">{block[0]}</Header>
                 <Separator wide={true} />
                 <div key={Math.random(10)}>
-                  {block[1].map((celldata) => (
+                  {block[1].map((CellData) => (
                     <div key={Math.random()}>
-                      <table className="RaspTable" key={Math.random(10)}>
+                      <table className="ScheduleTable" key={Math.random(10)}>
                         <tbody>
                           <tr>
-                            <td className="RaspTime" key={Math.random()}>
-                              {celldata.nf}
+                            <td className="ScheduleTime" key={Math.random()}>
+                              {CellData.nf}
                               <br />
-                              {celldata.kf}
+                              {CellData.kf}
                             </td>
-                            <td className="RaspLesson" key={Math.random()}>
-                              {celldata.subject}
+                            <td className="ScheduleLesson" key={Math.random()}>
+                              {CellData.subject}
                               <br></br>
-                              {celldata.type.split(", ")[1] !==
+                              {CellData.type.split(", ")[1] !==
                                 this.props.grname &&
-                                " (" + celldata.type.split(", ")[1] + ")"}
+                                " (" + CellData.type.split(", ")[1] + ")"}
                             </td>
-                            <td className="RaspAudit" key={Math.random()}>
-                              {" " + celldata.type.split(", ")[0] + "."}
+                            <td className="ScheduleAudit" key={Math.random()}>
+                              {" " + CellData.type.split(", ")[0] + "."}
                               <br></br>
-                              {celldata.number}
+                              {CellData.number}
                             </td>
-                            <td className="RaspPrep" key={Math.random()}>
-                              {celldata.teacher.split(" ")[0]}
+                            <td className="SchedulePrep" key={Math.random()}>
+                              {CellData.teacher.split(" ")[0]}
                               <br></br>
-                              {celldata.teacher.split(" ")[1]}
-                              {celldata.teacher.split(" ")[2]}
+                              {CellData.teacher.split(" ")[1]}
+                              {CellData.teacher.split(" ")[2]}
                             </td>
                           </tr>
                         </tbody>
@@ -128,27 +126,27 @@ class Rasp extends React.Component {
       } else if ((this.props.type === "1") | (this.props.type === 1)) {
         return (
           <div key={Math.random(1)}>
-            {rasp.map((block) => (
+            {Schedule.map((block) => (
               <div key={Math.random(10)}>
                 <Header mode="secondary">{block[0]}</Header>
                 <Separator wide={true} />
                 <div key={Math.random(10)}>
-                  {block[1].map((celldata) => (
+                  {block[1].map((CellData) => (
                     <div key={Math.random()}>
-                      <table className="RaspTable" key={Math.random(10)}>
+                      <table className="ScheduleTable" key={Math.random(10)}>
                         <tbody>
                           <tr>
-                            <td className="RaspTimeP" key={Math.random()}>
-                              {celldata.nf}
+                            <td className="ScheduleTimeP" key={Math.random()}>
+                              {CellData.nf}
                               <br />
-                              {celldata.kf}
+                              {CellData.kf}
                             </td>
-                            <td className="RaspLessonP" key={Math.random()}>
-                              {celldata.subject}
+                            <td className="ScheduleLessonP" key={Math.random()}>
+                              {CellData.subject}
                             </td>
-                            <td className="RaspAuditP" key={Math.random()}>
-                              {celldata.number}, {celldata.type}.{" "}
-                              {celldata.group}
+                            <td className="ScheduleAuditP" key={Math.random()}>
+                              {CellData.number}, {CellData.type}.{" "}
+                              {CellData.group}
                             </td>
                           </tr>
                         </tbody>
@@ -184,38 +182,19 @@ class Rasp extends React.Component {
     } else if (this.state.error !== "") {
       return (
         <Placeholder icon={<Icon56UsersOutline />} header="Ошибка">
-          Не удалось загрузить расписание
+          <p>Не удалось загрузить расписание</p>
         </Placeholder>
       );
-    } else if ((rasp.length === 0) & (this.state.isLoaded === true)) {
+    } else if ((Schedule.length === 0) & (this.state.isLoaded === true)) {
       return (
         <Placeholder icon={<Icon56UsersOutline />} header="Нет данных">
           Расписание не доступно
         </Placeholder>
       );
-    } /*else if (this.props.id === ""|this.props.id === "3"|this.rasp === "nan") {
-      return (
-        <Placeholder
-          icon={<Icon56UsersOutline />}
-          header="Группа не выбрана"
-          action={
-            <Button
-              size="l"
-              onClick={() => {
-                this.props.SearchPop();
-              }}
-              style={{ backgroundColor: "var(--main)" }}
-              key={Math.random()}>
-              Выбрать
-            </Button>
-          }>
-          Расписание не доступно
-        </Placeholder>
-      );
-    }*/ else {
+    } else {
       return <Spinner size="medium" style={{ marginTop: 20 }} />;
     }
   }
 }
 
-export default Rasp;
+export default ScheduleDrawer;
