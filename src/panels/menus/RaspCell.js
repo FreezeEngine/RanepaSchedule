@@ -6,25 +6,25 @@ import "./tables.css";
 //import { Headline } from "@vkontakte/vkui/src/components/Typography/Headline/Headline"
 //import Headline from "@vkontakte/vkui/src/components/Typography/Headline/Headline";
 
-const ScheduleCell = (ts, te, audit, prep, subj, type) => {
+const ScheduleCell = (data) => {
   return (
     <div>
       <table class="ScheduleTable">
         <tbody>
           <tr>
             <td class="ScheduleTime">
-              {ts}
+              {data.ts}
               <br />
-              {te}
+              {data.te}
             </td>
             <td class="ScheduleLesson">
-              {subj} ({type})
+              {data.subj} ({data.type})
             </td>
             <td class="ScheduleAudit">
-              {audit}
+              {data.audit}
               <br />
             </td>
-            <td class="SchedulePrep">{prep}</td>
+            <td class="SchedulePrep">{data.prep}</td>
           </tr>
         </tbody>
       </table>

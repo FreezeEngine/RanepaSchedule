@@ -2,7 +2,6 @@ import React from "react";
 import "@vkontakte/vkui/dist/vkui.css";
 import "@vkontakte/vkui/";
 import bridge from "@vkontakte/vk-bridge";
-//import SettinsMenu from "./menus/settings";
 import {
   View,
   Panel,
@@ -23,7 +22,6 @@ import Icon28UsersOutline from "@vkontakte/icons/dist/28/users_outline";
 import Icon28UserOutline from "@vkontakte/icons/dist/28/user_outline";
 import Schedule from "./menus/Schedule";
 import Cookies from "universal-cookie";
-import { object } from "prop-types";
 
 var combined = [];
 var groups = [];
@@ -280,13 +278,11 @@ class MainFrame extends React.Component {
           <Panel id="Search">
             <React.Fragment>
               <PanelHeader separator={false}>Найти группу</PanelHeader>
-
               <Search
                 value={this.state.Search}
                 onChange={this.onChange}
                 after={null}
               />
-
               {this.state.Search !== "" && (
                 <List>
                   {typeof this.groups !== "undefined" &&
