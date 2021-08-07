@@ -38,7 +38,7 @@ class ScheduleDrawer extends React.Component {
       return Schedule;
     } else {
       try {
-        Url = "https://ranepaschedule.000webhostapp.com/GetSchedule.php";
+        Url = "https://raneparedirector.azurewebsites.net/GetSchedule.php";
         await fetch(Url, {
           method: "POST",
           headers: {
@@ -192,7 +192,7 @@ class ScheduleDrawer extends React.Component {
         </Placeholder>
       );
     } else {
-      return <Spinner size="medium" style={{ marginTop: 20 }} />;
+      return <Spinner size="medium"/>;
     }
   }
 }

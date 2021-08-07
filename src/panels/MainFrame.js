@@ -125,7 +125,7 @@ class MainFrame extends React.Component {
     }
 
     try {
-      fetch("https://ranepaschedule.000webhostapp.com/GetGroupsAndTeachers.php")
+      fetch("https://raneparedirector.azurewebsites.net/GetGroupsAndTeachers.php")
         .then((res) => res.json())
         .then(
           (result) => {
@@ -145,7 +145,7 @@ class MainFrame extends React.Component {
           }
         );
     } catch {
-      fetch("https://ranepaschedule.000webhostapp.com/GetGroupsAndTeachers.php")
+      fetch("https://raneparedirector.azurewebsites.net/GetGroupsAndTeachers.php")
         .then((res) => res.json())
         .then(
           (result) => {
