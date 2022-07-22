@@ -1,8 +1,2 @@
-VK Mini Apps
-C:\hm\project>vk-miniapps-deploy
-√ Would you like to deploy to VK Mini Apps hosting using these commands? ... yes
-Error: 5: User authorization failed: invalid session.
-
-Не открывает никаких окон для авторизации, ничего, сразу же пишет ошибку "User authorization failed: invalid session."
-
-UPD: Просто удалить %HOMEPATH%\.config\configstore\@vkontakte\vk-miniapps-deploy.json
+#  Ranepa Schedule
+Powered by VK Mini Apps
